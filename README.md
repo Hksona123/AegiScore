@@ -1,3 +1,13 @@
+---
+title: Aegiscore Backend
+emoji: 🛡️
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_file: Dockerfile
+pinned: false
+---
+
 # 🛡️ AegisCore
 
 **Next-Generation AI Cybersecurity Command Center**
