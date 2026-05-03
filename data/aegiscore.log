@@ -1,0 +1,6 @@
+2026-05-04 02:37:57,864 - app.utils.chat_monitor - INFO - Loaded chat_model.pkl successfully.
+2026-05-04 02:37:57,906 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-04 02:37:57,906 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-04 02:37:57,907 - apscheduler.scheduler - INFO - Added job "BaselineService.recompute_baselines" to job store "default"
+2026-05-04 02:37:57,907 - apscheduler.scheduler - INFO - Added job "create_app.<locals>.run_escalation_check" to job store "default"
+2026-05-04 02:37:57,907 - apscheduler.scheduler - INFO - Scheduler started

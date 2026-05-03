@@ -9,11 +9,16 @@ RUN apt-get update && apt-get install -y gcc libpq-dev && rm -rf /var/lib/apt/li
 RUN useradd -m -u 1000 user
 USER user
 ENV PATH="/home/user/.local/bin:$PATH"
+ENV PYTHONUNBUFFERED=1
+
+# Create app directories and set ownership early
+USER root
+RUN mkdir -p /app/instance /app/data && chown -R user:user /app
+USER user
 
 # Install python dependencies from the Server folder
 COPY --chown=user:user Server/requirements.txt .
 RUN pip install --user --no-cache-dir -r requirements.txt
-RUN pip install --user --no-cache-dir scikit-learn pandas flask-jwt-extended psycopg2-binary redis gunicorn apscheduler llama-index llama-index-llms-gemini llama-index-embeddings-huggingface
 
 # Copy the rest of the Server folder
 COPY --chown=user:user Server/ .
