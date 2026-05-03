@@ -37,12 +37,9 @@ share/python-wheels/
 .installed.cfg
 *.egg
 
-# Data Files & Weights (Too large for HF without LFS)
+# Data Files & Weights (Ignoring files > 10MB)
 Server/VectorData/
 Server/resources/datasets/
-*.h5
-*.pkl
-*.db
 *.json
 *.csv
 
